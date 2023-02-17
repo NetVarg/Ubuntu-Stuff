@@ -1,0 +1,76 @@
+/* Dark Style for Nemo file mananger. Path: ~/.config/gtk-3.0/gtk.css */
+
+/* Colors for Side Bar. */
+.nemo-window .sidebar .view {
+  background-color: #454545;
+  color: #bbecff;
+}
+
+/* Nemo Main window. */
+.nemo-window .view {
+  background-color: #454545;
+  color: #f0f0f0;
+}
+
+/* Any Selected line. */
+.nemo-window .nemo-inactive-pane .view {
+  background-color: #303030;
+  color: #CBCBCB;
+}
+
+/* Any Selected line. */
+.nemo-window .view:selected:focus,
+.nemo-window .view:selected,
+.nemo-window .nemo-inactive-pane .view:selected:focus,
+.nemo-window .nemo-inactive-pane .view:selected {
+  background-color: alpha (#00307b, 0.8);
+}
+
+
+/* Border around menus. */
+.nemo-window decoration {
+  border: 1px solid #dedede;
+}
+
+/* Toolbar, Searchbar, Menus */
+.nemo-window * {
+  color: #ffffd7;
+  background-color: #454545;
+}
+
+/* All Image Button */
+.nemo-window .image-button * {
+  padding: 3px;
+  background-color: #454545;
+}
+
+/* Color for clicked text. */
+.nemo-window * .view:selected {
+  color: rgb(255, 225, 54);
+}
+
+/* Color for any text selection. */
+.nemo-window * entry selection {
+  background-color: #ffe571;
+  color:#590083;
+}
+
+
+/* Not used, but should work. */
+
+/* Selected text in path box at toolbar only. */
+/*.nemo-window .primary-toolbar stack>box entry selection {
+  background-color: #ffe571;
+  color:#590083;
+}*/
+
+/* Path box background color. */
+/*.nemo-window .primary-toolbar stack > box {
+  color:#00307b;
+  background-color: #ffff44;
+}*/
+
+/* Toolbar background. */
+/*.nemo-window .primary-toolbar {
+  background-color: #454545;
+}*/
