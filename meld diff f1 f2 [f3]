@@ -1,0 +1,9 @@
+#! /bin/bash -e
+
+#   Nautlius helper script
+#	~/.local/share/nautilus/scipts/'meld diff f1 f2 [f3]'
+
+#   Call diff tool meld with files:  f1 f2 or f1 f2 f3
+#   OR diff folder/directory:        d1 d2 or d1 d2 d3
+
+meld "$@"
