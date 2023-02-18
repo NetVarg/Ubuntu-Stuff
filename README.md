@@ -2,4 +2,4 @@
 Scripts, css, etc. for my Ubuntu Desktop
 
 
-Nemo dark theme: gtk.css
+gtk.css for Nemo dark theme
