@@ -55,6 +55,11 @@
   color:#590083;
 }
 
+/* Color for any text caret. */
+.nemo-window * entry {
+  caret-color:#28f8ff;
+}
+
 
 /* Not used, but should work. */
 
