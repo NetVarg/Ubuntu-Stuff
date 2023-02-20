@@ -13,3 +13,5 @@ Nemo dark
 ## Nautilus helper scripts
 See folder nautilus.
 - Integrate meld diff tool to context menu: ``meld diff f1 f2 [f3]``
+
+***
