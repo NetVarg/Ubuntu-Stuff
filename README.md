@@ -10,8 +10,10 @@ Nemo dark
 ![Nemo dark](./img/NemoDark.png)
 
 ***
-## Nautilus helper scripts
-See folder nautilus.
+## Nautilus (file manager for GNOME 'Files') helper scripts
+See folder nautilus.\
+Copy file to your home .local... folder: ~/.local/share/nautilus/scripts.\
+Allow script to be run by nautilus with the command: ``chmod +x 'meld diff f1 f2 [f3]'`` 
 - Integrate meld diff tool to context menu: ``meld diff f1 f2 [f3]``
 
 ***
