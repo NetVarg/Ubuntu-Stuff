@@ -13,7 +13,7 @@ Nemo dark
 ## Nemo custom action
 See folder nemo.\
 Copy file to your home .local... folder: ~/.local/share/nemo/actions
-- Integrate meld diff tool to context menu: ``meld diff f1 f2 [f3]``
+- Integrate meld diff tool to context menu: ``meld diff f1 f2 [f3].nemo_action``
 
 ***
 ## Nautilus (file manager for GNOME 'Files') helper scripts
