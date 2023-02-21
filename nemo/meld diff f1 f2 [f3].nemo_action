@@ -1,0 +1,9 @@
+[Nemo Action]
+Active=true
+Name=meld diff f1 f2 [f3]
+Comment=meld diff f1 f2 optional f3 (folder or file)
+Quote=double
+Exec=/usr/bin/meld %F
+Icon-Name=folder-templates
+Selection=m
+Extensions=any;
