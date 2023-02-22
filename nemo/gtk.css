@@ -32,7 +32,7 @@
   border: 1px solid #dedede;
 }
 
-/* Toolbar, Searchbar, Menus */
+/* Toolbar, Searchbar */
 .nemo-window * {
   color: #ffffd7;
   background-color: #454545;
@@ -46,18 +46,31 @@
 
 /* Color for clicked text. */
 .nemo-window * .view:selected {
-  color: rgb(255, 225, 54);
+  color: #ffff36;
 }
 
 /* Color for any text selection. */
 .nemo-window * entry selection {
   background-color: #ffe571;
-  color:#590083;
+  color: #590083;
 }
 
 /* Color for any text caret. */
 .nemo-window * entry {
-  caret-color:#28f8ff;
+  caret-color: #28f8ff;
+}
+
+/* Colors for menu and menu bar. */
+.nemo-window menubar * {
+  background-color: #313131;
+  color: #ffffd7;
+
+}
+
+/* Hover color for menuitem. */
+.nemo-window menuitem :hover * {
+  background-color: #00307b;
+  color: #ffff36;
 }
 
 
