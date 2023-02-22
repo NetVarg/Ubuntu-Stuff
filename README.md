@@ -3,7 +3,7 @@ Scripts, css, etc. for my Ubuntu Desktop
 
 ***
 ## Nemo dark theme
-See ``nemo\gtk.css file``\
+See [``nemo\gtk.css file``](./nemo/gtk.css)\
 Ubuntu Path: ``~/.config/gtk-3.0/gtk.css``
 
 Nemo dark
