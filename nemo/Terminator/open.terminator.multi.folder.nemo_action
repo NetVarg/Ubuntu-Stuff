@@ -1,0 +1,9 @@
+[Nemo Action]
+
+Name=Open in Gnome Terminator
+Comment=Open in Gnome Terminator the selected folder(s)
+Exec=<open.terminator.multi.folder.sh %F>
+Quote=double
+Icon-Name=terminator
+Selection=any
+Extensions=dir;

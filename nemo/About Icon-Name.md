@@ -1,4 +1,4 @@
-## Names for Tag: ``Icon-Name=``
+## Nemo Action Tag: ``Icon-Name=``
 
 [List of Names see here](
 https://github.com/linuxmint/nemo/blob/master/libnemo-private/nemo-icon-names.h)
