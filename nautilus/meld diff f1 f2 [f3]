@@ -1,4 +1,4 @@
-#! /bin/bash -e
+#! /bin/bash
 
 #   Nautlius helper script
 #	~/.local/share/nautilus/scipts/'meld diff f1 f2 [f3]'
