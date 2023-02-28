@@ -36,4 +36,7 @@ Allow script to be run by nautilus with the command: ``chmod +x 'meld diff f1 f2
 
 - Integrate meld diff tool to context menu: [``meld diff f1 f2 [f3]``](./nautilus/meld%20diff%20f1%20f2%20%5Bf3%5D)
 
+- Integrate the [Gnome Terminator](https://en.wikipedia.org/wiki/GNOME_Terminator) (Multiple terminals in one window) to context menu. Opens Terminator even if folder path is a Samba Server path. Uses Nautilus Samba 'mount point': /run/user/$(id -u)/gvfs...\
+[Open in Gnome Terminator](./nautilus/Open%20in%20Gnome%20Terminator)
+
 ***

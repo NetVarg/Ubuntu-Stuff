@@ -1,0 +1,51 @@
+#!/bin/bash
+
+#   Nautlius helper script
+#	'~/.local/share/nautilus/scipts/Open in Gnome Terminator'
+
+#   Open folder or folders in the Gnome Terminator (multiple
+#   terminals in one window).
+#   Opens Terminator even if folder path is a Samba Server path.
+#   Uses Nautilus Samba 'mount point': /run/user/$(id -u)/gvfs...
+
+
+# Check if selected folder(s) from samba server is.
+echo $NAUTILUS_SCRIPT_SELECTED_URIS | grep -E '^smb://' >/dev/null 2>&1
+smb=$?
+
+if [ $smb -eq 0 ]; then
+    for folder in $NAUTILUS_SCRIPT_SELECTED_URIS; do
+        smbServer=""
+        share=""
+        if [[ $folder =~ ^.+://([^/]+)/ ]]; then
+            smbServer="${BASH_REMATCH[1]}"
+        else
+            notify-send -u normal \
+                "Gnome Terminator can't open network folder!" \
+                "<b>Samba Server not found.</b>\r<i>$folder</i>"
+            exit 1
+        fi
+        if [[ $folder =~ ^.+://[^/]+/(.+$) ]]; then
+            shareWS="${BASH_REMATCH[1]}"
+            share=$(echo "$shareWS" | sed 's/%20/ /g')
+        else
+            notify-send -u normal \
+                "Gnome Terminator can't open network folder!" \
+                "<b>Share not found.</b>\r<i>$folder</i>"
+            exit 1
+        fi
+        smbPath="/run/user/$(id -u)/gvfs/smb-share:server=$smbServer,share=$share/"
+
+        terminator --new-tab --working-directory="$smbPath" >/dev/null 2>&1 &
+    done
+else
+    while IFS= read -r folder; do
+        # Check if not an empty line.
+        echo "$folder" | grep -E '^$' >/dev/null 2>&1
+        retval=$?
+        if [ $retval -eq 1 ]; then
+
+            terminator --new-tab --working-directory="$folder" >/dev/null 2>&1 &
+        fi
+    done <<<"$NAUTILUS_SCRIPT_SELECTED_FILE_PATHS"
+fi
