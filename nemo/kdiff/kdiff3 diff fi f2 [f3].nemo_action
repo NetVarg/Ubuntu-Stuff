@@ -1,0 +1,9 @@
+[Nemo Action]
+Active=true
+Name=kdiff3 diff f1 f2 [f3]
+Comment=kdiff3 diff tool f1 f2 optional f3 (folder or file)
+Quote=double
+Exec=/usr/bin/kdiff3 %F
+Icon-Name=folder-templates
+Selection=m
+Extensions=any;
