@@ -2,7 +2,8 @@
 My Config/Settings File for Gnome Terminator (Multiple terminals in one window)
 ===============================================================================
 
-Colors for foreground, palette (File, directory, link color coding).
-Startup window size.
+Settings for:
+- Colors for foreground, palette (File, directory, link color coding).
+- Startup window size.
 
 File Location: ~/.config/terminator/config
