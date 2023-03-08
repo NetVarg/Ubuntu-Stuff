@@ -1,0 +1,9 @@
+[Nemo Action]
+Active=true
+Name=kdiff3 diff with PREVIOUS stored path
+Comment=kdiff3 diff with previous stored path
+Quote=double
+Exec=<kdiff3_remember_restore_path.sh %F>
+Icon-Name=folder-templates
+Selection=any
+Extensions=any;
