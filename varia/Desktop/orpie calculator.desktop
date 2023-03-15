@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=orpie calculator
+GenericName=orpie calculator
+Comment=orpie is a console-based RPN calculator.
+Type=Application
+Categories=GTK;Utility;Development;Office;
+Terminal=true
+Exec=/usr/bin/orpie
+NoDisplay=false
+Icon=/home/username/.local/share/applications/orpie.png
