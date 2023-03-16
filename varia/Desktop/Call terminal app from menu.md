@@ -1,4 +1,6 @@
-# Call a terminal app from Application Menu
+# Start a terminal app from 'Show Applications'
+
+Start a console program from 'Show Applications' and [Applications Menu](https://extensions.gnome.org/extension/6/applications-menu/) if active.
 
 ## Example: orpie console-based RPN calculator
 
