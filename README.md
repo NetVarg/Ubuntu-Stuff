@@ -43,3 +43,9 @@ Allow script to be run by nautilus with the command: ``chmod +x 'meld diff f1 f2
 [``Open in Gnome Terminator``](./nautilus/Open%20in%20Gnome%20Terminator)
 
 ***
+
+## Add a console program to 'Show Applications' and Applications Menu
+
+[Start a console program from 'Show Applications' and Applications Menu if active.](./varia/Desktop/Call%20terminal%20app%20from%20menu.md)
+
+***
