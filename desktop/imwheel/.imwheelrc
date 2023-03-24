@@ -104,6 +104,33 @@ None, Left, Alt_L|Left
 None, Right, Alt_L|Right
 # -----------------------------------------------
 
+# LibreOffice -----------------------------------
+"^libreoffice$"
+#
+# Click Wheel Left Button: go to beginning of word.
+None, Left, Control_L|Left
+
+# Click Wheel Left Button: go to start of next word.
+None, Right, Control_L|Right
+
+# Click Control_left+Wheel Left Button: delete text to end of sentence.
+Control_L, Left, Control_L|Shift_L|Delete
+
+# Click Thumb1: selecting to the left word by word.
+None, Thumb1, Control_L|Shift_L|Left
+
+# Click Control_left+Thumb1: move down screen page.
+Control_L, Thumb1, Page_Down
+
+# Click Thumb2: selecting to the right word by word.
+None, Thumb2, Control_L|Shift_L|Right
+
+# Click Control_left+Thumb2: screen page up.
+Control_L, Thumb2, Page_Up
+
+# Click Alt_left+Thumb2: select to beginning of paragraph.
+Alt_L, Thumb2, Control_L|Shift_L|Up
+
 # All apps --------------------------------------
 ".*"
 #
