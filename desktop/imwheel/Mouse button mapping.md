@@ -19,7 +19,7 @@ This will run IMWheel in the foreground in debug mode:\
 - Testing example output:\
 In Firefox if you click wheel left button 'imwheel' sends "Alt_L" and "Left" (=left arrow) to Firefox see 'Keysyms Out' below, means Browser goes back.
 
-```json
+```java
 WinAction (0x47112c33ff5a):
     Priority         : 0
     Window Regex     : "^firefox$" = Button mapping for Firefox browser.
