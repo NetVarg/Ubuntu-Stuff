@@ -49,3 +49,9 @@ Allow script to be run by nautilus with the command: ``chmod +x 'meld diff f1 f2
 [Start a console program from 'Show Applications' and Applications Menu if active.](./varia/Desktop/Call%20terminal%20app%20from%20menu.md)
 
 ***
+
+## Mouse button mapping with imwheel
+
+[Use 'imwheel' to mapping specific mouse buttons for specific function on apps.](./desktop/imwheel/Mouse%20button%20mapping.md)
+
+***

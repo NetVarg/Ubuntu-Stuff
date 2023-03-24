@@ -1,0 +1,115 @@
+# imwheel config (.imwheelrc).
+# imwheel maps mouse buttons for specific function on apps.
+#
+# Path: ~/.imwheelrc
+
+# Testing the imwheelrc with:
+# $ imwheel -d --debug --kill
+# This will run IMWheel in the foreground in debug mode.
+# As you use your mouse and keyboard, you will be able to
+# see the window property values that IMWheel is attempting to match.
+
+#  Index   Interpreted As    Button Number   Name in imwheelrc
+#  1       Wheel Up          4               Up
+#  2       Wheel Down        5               Down
+#  3       Wheel Left        6               Left
+#  4       Wheel Right       7               Right
+#  5       Thumb Button 1    8               Thumb1
+#  6       Thumb Button 2    9               Thumb2
+#  7       Extra Button 1    10              ExtBt7
+#  8       Extra Button 2    11              ExtBt8
+
+# Firefox Browser -------------------------------
+"^firefox$"
+#
+# Click Wheel Left Button: Browser goes back.
+None, Left, Alt_L|Left
+
+# Click Ctrl_left+Wheel Left Button: Find Previous.
+Control_L, Left, Shift_L|F3
+
+# Click Shift_left+Wheel Left Button: Go one Tab to the Left.
+Shift_L, Left, Control_L|Page_Up
+
+# Click Wheel Right Button: Browser goes forward.
+None, Right, Alt_L|Right
+
+# Click Ctrl_left+Wheel Right Button: Find Again.
+Control_L, Right, F3
+
+# Click Shift_left+Wheel Right Button: Go one Tab to the Right.
+Shift_L, Right, Control_L|Page_Down
+
+# Click Thumb2: close current tab.
+None, Thumb2, Control_L|w
+
+# Click Ctrl_left+Thumb2: open new tab.
+Control_L, Thumb2, Control_L|t
+
+# Click Ctrl_left+Shift+Thumb2: Reload (override cache).
+Control_L|Shift_L, Thumb2, Control_L|F5
+
+# Click Thumb1: Browser scrolls down one page.
+None, Thumb1, Page_Down
+# -----------------------------------------------
+
+# Console program Terminator --------------------
+"^terminator$"
+#
+# Click Thumb1: open a new tab.
+None, Thumb1, Control_L|Shift_L|t
+
+# Click Thumb2: close the current terminal.
+None, Thumb2, Control_L|Shift_L|w
+
+# Click Wheel Left: move to previous tab.
+None, Left, Control_L|Page_Up
+
+# Click Wheel Right: move to next tab.
+None, Right, Control_L|Page_Down
+# -----------------------------------------------
+
+# Visual Studio Code ----------------------------
+"^code$"
+#
+# Click Thumb1: Go to file.
+None, Thumb1, Control_L|p
+
+# Click Thumb1: open command palette.
+Control_L, Thumb1, Shift_L|Control_L|p
+
+# Click Thumb2: close the current tab.
+None, Thumb2, Control_L|w
+
+# Click Wheel Left: move to previous tab.
+None, Left, Control_L|Page_Up
+
+# Click Wheel Right: move to next tab.
+None, Right, Control_L|Page_Down
+# -----------------------------------------------
+
+# Nemo File Manager -----------------------------
+"^nemo$"
+#
+# Click Thumb1: open a new tab.
+None, Thumb1, Control_L|t
+
+# Click Thumb2: close current tab.
+None, Thumb2, Control_L|w
+
+# Click Wheel Left Button: Navigate one directory back.
+None, Left, Alt_L|Left
+
+# Click Wheel Right Button: Navigate one directory forward.
+None, Right, Alt_L|Right
+# -----------------------------------------------
+
+# All apps --------------------------------------
+".*"
+#
+# Click Thumb1: go back.
+None, Thumb1, Alt_L|Left
+
+# Click Thumb2: go forward.
+None, Thumb2, Alt_L|Right
+# -----------------------------------------------
