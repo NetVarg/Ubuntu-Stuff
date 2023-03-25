@@ -104,8 +104,8 @@ None, Left, Alt_L|Left
 None, Right, Alt_L|Right
 # -----------------------------------------------
 
-# LibreOffice -----------------------------------
-"^libreoffice$"
+# LibreOffice Writer ----------------------------
+"^libreoffice.*writer$"
 #
 # Click Wheel Left Button: go to beginning of word.
 None, Left, Control_L|Left
