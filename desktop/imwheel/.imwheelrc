@@ -130,6 +130,32 @@ Control_L, Thumb2, Page_Up
 
 # Click Alt_left+Thumb2: select to beginning of paragraph.
 Alt_L, Thumb2, Control_L|Shift_L|Up
+# -----------------------------------------------
+
+# LibreOffice Calc ------------------------------
+"^libreoffice.*calc$"
+#
+# Click Control_left+Wheel Left Button: open Format cells.
+Control_L, Left, Control_L|1
+
+# Click Shift_left+Wheel Left Button: select all cells, in direction left.
+Shift_L, Left, Control_L|Shift_L|Left
+
+# Click Shift_left+Wheel Right Button: select all cells, in direction right.
+Shift_L, Right, Control_L|Shift_L|Right
+
+# Click Control_left+Thumb1 Button: page down.
+Control_L, Thumb1, Page_Down
+
+# Click Control_left+Thumb2 Button: page up.
+Control_L, Thumb2, Page_Up
+
+# Click Alt_left+Thumb1 Button: move one screen right.
+Alt_L, Thumb1, Alt_L|Page_Down
+
+# Click Alt_left+Thumb2 Button: move one screen left.
+Alt_L, Thumb2, Alt_L|Page_Up
+# -----------------------------------------------
 
 # All apps --------------------------------------
 ".*"
