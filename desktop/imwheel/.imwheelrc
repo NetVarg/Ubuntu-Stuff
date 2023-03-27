@@ -51,6 +51,9 @@ Control_L|Shift_L, Thumb2, Control_L|F5
 
 # Click Thumb1: Browser scrolls down one page.
 None, Thumb1, Page_Down
+
+# Click Control_left+Thumb1: Browser scrolls up one page.
+Control_L, Thumb1, Page_Up
 # -----------------------------------------------
 
 # Console program Terminator --------------------
