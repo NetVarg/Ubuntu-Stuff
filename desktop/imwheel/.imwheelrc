@@ -56,6 +56,43 @@ None, Thumb1, Page_Down
 Control_L, Thumb1, Page_Up
 # -----------------------------------------------
 
+# Chromium Browser ------------------------------
+"^chromium$"
+#
+# Click Wheel Left Button: Browser goes back.
+None, Left, Alt_L|Left
+
+# Click Ctrl_left+Wheel Left Button: Find Previous.
+Control_L, Left, Shift_L|F3
+
+# Click Shift_left+Wheel Left Button: Go one Tab to the Left.
+Shift_L, Left, Control_L|Page_Up
+
+# Click Wheel Right Button: Browser goes forward.
+None, Right, Alt_L|Right
+
+# Click Ctrl_left+Wheel Right Button: Find Again.
+Control_L, Right, F3
+
+# Click Shift_left+Wheel Right Button: Go one Tab to the Right.
+Shift_L, Right, Control_L|Page_Down
+
+# Click Thumb2: close current tab.
+None, Thumb2, Control_L|w
+
+# Click Ctrl_left+Thumb2: open new tab.
+Control_L, Thumb2, Control_L|t
+
+# Click Ctrl_left+Shift+Thumb2: Reload (override cache).
+Control_L|Shift_L, Thumb2, Control_L|F5
+
+# Click Thumb1: Browser scrolls down one page.
+None, Thumb1, Page_Down
+
+# Click Control_left+Thumb1: Browser scrolls up one page.
+Control_L, Thumb1, Page_Up
+# -----------------------------------------------
+
 # Console program Terminator --------------------
 "^terminator$"
 #
@@ -99,6 +136,12 @@ None, Thumb1, Control_L|t
 
 # Click Thumb2: close current tab.
 None, Thumb2, Control_L|w
+
+# Click Wheel Left Button: Go one Tab to the Left.
+Control_L, Left, Control_L|Shift_L|Tab
+
+# Click Wheel Right Button: Go one Tab to the Right.
+Control_L, Right, Control_L|Tab
 
 # Click Wheel Left Button: Navigate one directory back.
 None, Left, Alt_L|Left
