@@ -3,13 +3,16 @@
 imwheel - a mouse wheel and button interpreter for X Windows.
 Use 'imwheel' to mapping specific mouse buttons for specific function on apps.
 
-**Some applications do not work on the Wayland desktop** such as Terminator, Nemo, etc.
+**Importend**
+
+**Some applications do not work on the Wayland desktop server** such as Terminator, Nemo, Firefox, etc.
 Check whether Wayland in use. Use the following command in a terminal:
 
 ``echo $XDG_SESSION_TYPE``
 
 Ouput: ``wayland``
 
+---
 [The Readme of the project.](https://imwheel.sourceforge.net/README)\
 [man page.](https://manpages.ubuntu.com/manpages/kinetic/en/man1/imwheel.1.html)
 

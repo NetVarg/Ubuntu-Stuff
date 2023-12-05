@@ -55,3 +55,11 @@ Allow script to be run by nautilus with the command: ``chmod +x 'meld diff f1 f2
 [Use 'imwheel' to mapping specific mouse buttons for specific function on apps.](./desktop/imwheel/Mouse%20button%20mapping.md)
 
 ***
+
+## Snap
+
+Instead of laboriously updating the snap applications via the UI, [I use the following script.](./snap/snap-update.sh)
+
+Don't forget set mode to executable: ``chmod +x snap-update.sh``
+
+***
