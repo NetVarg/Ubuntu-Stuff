@@ -24,10 +24,14 @@ Copy file or files to your home .local... folder: ~/.local/share/nemo/actions
 - Integrate the [kdiff3](https://apps.kde.org/kdiff3/) (file and folder diff and merge tool) to context menu: [``kdiff3 diff f1 f2 [f3].nemo_action``](./nemo/kdiff/kdiff3%20diff%20fi%20f2%20%5Bf3%5D.nemo_action).\
 Compare files or folders with different paths using kdiff3. 1st remember action with: [``kdiff3 remember path for later diff.nemo_action``](./nemo/kdiff/kdiff3%20remember%20path%20for%20later%20diff.nemo_action), then select second file/folder and start diff with: [``kdiff3 diff with previous stored path.nemo_action``](./nemo/kdiff/kdiff3%20diff%20with%20previous%20stored%20path.nemo_action). Both action uses shell: [``kdiff3_remember_restore_path.sh``](./nemo/kdiff/kdiff3_remember_restore_path.sh). Set mode for shell file to executable: ``chmod +x kdiff3_remember_restore_path.sh``.
 
-- Integrate the [Gnome Terminator](https://en.wikipedia.org/wiki/GNOME_Terminator) (Multiple terminals in one window) to context menu: 
+- Integrate the [Gnome Terminator](https://en.wikipedia.org/wiki/GNOME_Terminator) (Multiple terminals in one window) to context menu:
 [open.terminator.multi.folder.nemo_action](./nemo/Terminator/open.terminator.multi.folder.nemo_action).\
 The Action uses the following bash script: [open.terminator.multi.folder.sh](./nemo/Terminator/open.terminator.multi.folder.sh) copy it to nemo/action folder too.\
 And set mode to executable: ``chmod +x open.terminator.multi.folder.sh``
+
+- Integrate the [p7zip](https://de.wikipedia.org/wiki/P7zip) with script: [7z_archive_with_ultra_settings.nemo_action](./nemo/p7zip/7z_archive_with_ultra_settings.nemo_action).\
+The Action uses the following bash script: [7z_archive_with_ultra_settings.sh](./nemo/p7zip/7z_archive_with_ultra_settings.sh) copy it to nemo/action folder too.\
+And set mode to executable: ``chmod +x 7z_archive_with_ultra_settings.sh``
 
 ***
 

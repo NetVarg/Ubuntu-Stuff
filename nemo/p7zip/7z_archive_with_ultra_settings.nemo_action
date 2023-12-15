@@ -1,0 +1,9 @@
+[Nemo Action]
+Active=true
+Name=7z archive with ultra settings
+Comment=Create 7z archive with ultra settings, folder(s) or file(s)
+Quote=double
+Exec=<7z_archive_with_ultra_settings.sh %F>
+Icon-Name=folder-templates
+Selection=any
+Extensions=any;
