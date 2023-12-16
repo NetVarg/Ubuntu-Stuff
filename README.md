@@ -29,9 +29,10 @@ Compare files or folders with different paths using kdiff3. 1st remember action 
 The Action uses the following bash script: [open.terminator.multi.folder.sh](./nemo/Terminator/open.terminator.multi.folder.sh) copy it to nemo/action folder too.\
 And set mode to executable: ``chmod +x open.terminator.multi.folder.sh``
 
-- Integrate the [p7zip](https://de.wikipedia.org/wiki/P7zip) with script: [7z_archive_with_ultra_settings.nemo_action](./nemo/p7zip/7z_archive_with_ultra_settings.nemo_action).\
+- Integrate the file archiver [p7zip (7-Zip)](https://www.7-zip.org/) with script: [7z_archive_with_ultra_settings.nemo_action](./nemo/p7zip/7z_archive_with_ultra_settings.nemo_action).\
 The Action uses the following bash script: [7z_archive_with_ultra_settings.sh](./nemo/p7zip/7z_archive_with_ultra_settings.sh) copy it to nemo/action folder too.\
-And set mode to executable: ``chmod +x 7z_archive_with_ultra_settings.sh``
+And set mode to executable: ``chmod +x 7z_archive_with_ultra_settings.sh``\
+The prerequisite is that [p7zip-full](https://packages.ubuntu.com/search?keywords=p7zip-full) is installed. ``sudo apt install p7zip-full``
 
 ***
 
