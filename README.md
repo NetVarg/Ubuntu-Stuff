@@ -70,3 +70,7 @@ Instead of laboriously updating the snap applications via the UI, [I use the fol
 Don't forget set mode to executable: ``chmod +x snap-update.sh``
 
 ***
+
+## Varia
+
+[Install 7-Zip (executable 7zz) from 7-Zip home page](./varia/7zz/install%207-Zip.md)
