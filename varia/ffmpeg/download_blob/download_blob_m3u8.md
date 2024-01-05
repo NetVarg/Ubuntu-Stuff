@@ -3,6 +3,7 @@
 In embedded videos, the URL is often missing or specified as a 'blob'. How to download this video?
 
 ![Embedded video](../../../img/blob_m3u8_download_inspector.jpg)
+***
 
 1. Get the video URL \
 &nbsp;0. Open "Web Developer Tools" (Ctrl+Shift+I or F12). Select tab Network \
@@ -11,6 +12,7 @@ In embedded videos, the URL is often missing or specified as a 'blob'. How to do
 &nbsp;3. GET download URL, open context menu "Copy Value"
 
 ![Get video URL](../../../img/blob_m3u8_download_network.jpg)
+***
 
 2. Download video with [FFmpeg](https://ffmpeg.org/) \
 Use command ffmpeg in a console/terminal to download the video.\
