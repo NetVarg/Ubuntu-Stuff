@@ -30,3 +30,19 @@ Args and Options
 * "[-codec](https://ffmpeg.org//ffmpeg-all.html#Stream-specifiers-1) copy" or "-codec: copy" would copy all the streams without reencoding.
 * "[-c](https://ffmpeg.org//ffmpeg-all.html#Main-options) copy" copies the first video, audio, and subtitle bitstream from the input to the output file without re-encoding them.
 * "file.mp4" is the output file name.
+
+***
+\
+&nbsp;
+**What if the m3u8 file name is unrecognizable?**
+
+![Example unrecognizable m3u8 file name](../../../img/m3u8_not_apparent_inspector.jpg)
+
+**Search the x-mpegurl type in the tab Network.**
+
+* Sort according Type
+* Searching for x-mpegurl
+* Search for index.m3u8, master.m3u8 or similar
+* Click row, GET download URL from Header Tab, see 2nd picture above
+
+![Search x-mpegurl](../../../img/m3u8_not_apparent_network.jpg)
