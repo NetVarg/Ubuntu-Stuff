@@ -73,8 +73,8 @@ Don't forget set mode to executable: ``chmod +x snap-update.sh``
 
 ## Varia
 
-[Install 7-Zip (executable 7zz) from 7-Zip home page](./varia/7zz/install%207-Zip.md)
+* [Install 7-Zip (executable 7zz) from 7-Zip home page](./varia/7zz/install%207-Zip.md)
 
-**Download embedded videos** which uses M3U8 file (media playlist). Determine URL and download it with ffmpeg.\
+* **Download embedded videos** which uses M3U8 file (media playlist). Determine URL and download it with ffmpeg.\
 In embedded videos, the URL is often missing or specified as a 'blob'. How to download this video?\
 [Download an embedded video which contains ...src="blob:https://www..."](./varia/ffmpeg/download_blob/download_blob_m3u8.md)

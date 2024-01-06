@@ -34,7 +34,8 @@ Args and Options
 ***
 \
 &nbsp;
-**What if the m3u8 file name is unrecognizable?**
+
+## What if the m3u8 file name is unrecognizable?
 
 ![Example unrecognizable m3u8 file name](../../../img/m3u8_not_apparent_inspector.jpg)
 
@@ -42,7 +43,7 @@ Args and Options
 
 * Sort according Type
 * Searching for x-mpegurl
-* Search for index.m3u8, master.m3u8 or similar
+* Search for index.m3u8, master.m3u8 or similar in column File
 * Click row, GET download URL from Header Tab, see 2nd picture above
 
 ![Search x-mpegurl](../../../img/m3u8_not_apparent_network.jpg)
