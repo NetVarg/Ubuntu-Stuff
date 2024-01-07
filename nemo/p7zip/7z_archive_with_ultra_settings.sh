@@ -18,7 +18,6 @@ if [ $? = 0 ]; then
                        --entry-text="${usr_dir}/${archName}.7z")
     
     if [ $? = 0 ]; then
-        echo $usr_file
         # Adds all files or directories to archive using "ultra settings".
         message=$(7z a -t7z -m0=lzma -mx=9 -mfb=64 -md=32m -ms=on \
                        "${usr_file}" "$@")
