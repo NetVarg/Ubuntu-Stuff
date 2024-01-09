@@ -1,0 +1,10 @@
+[Nemo Action]
+Active=true
+Name=7z extraction
+Comment=Extract 7z archive with entry of extract folder.
+Quote=double
+Exec=<7z_extraction.sh %F>
+Terminal=true
+Icon-Name=folder-templates
+Selection=s
+Extensions=any;
