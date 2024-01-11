@@ -3,7 +3,7 @@
 # The prerequisite is that 'p7zip-full' is installed.
 # Extracts a 7z archive.
 # Asks whether files can be overwritten.
-# Ask for the zip password if necessary.
+# Asks for the zip password if necessary.
 
 # Get current folder.
 dir=$(dirname "$1")
