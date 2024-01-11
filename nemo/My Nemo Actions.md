@@ -31,7 +31,6 @@ The Action uses the following bash script: [7z_archive_with_ultra_settings.sh](.
 And set mode to executable: ``chmod +x 7z_archive_with_ultra_settings.sh``\
 The prerequisite is that [p7zip-full](https://packages.ubuntu.com/search?keywords=p7zip-full) is installed. ``sudo apt install p7zip-full``\
 
-
 - **Extract 7-Zip, zip, bzip2, gz Archive**
 \
 Integrate the file archiver [p7zip (7-Zip)](https://www.7-zip.org/) to extract 7z, zip, bzip2, gz Archive with the script: [7z_extraction.nemo_action](./p7zip/7z_extraction.nemo_action).\
@@ -47,5 +46,16 @@ The prerequisite is that [p7zip-full](https://packages.ubuntu.com/search?keyword
 ![Ask password](../img/askForPwd.jpg)
 
 ![Extraction finished](../img/extraction_finished.jpg)
+
+***
+
+## Terminator
+
+- Integrate the [Gnome Terminator](https://en.wikipedia.org/wiki/GNOME_Terminator) (Multiple terminals in one window) to context menu:
+[open.terminator.multi.folder.nemo_action](./Terminator/open.terminator.multi.folder.nemo_action).\
+The Action uses the following bash script: [open.terminator.multi.folder.sh](./Terminator/open.terminator.multi.folder.sh) copy it to nemo/action folder too.\
+And set mode to executable: ``chmod +x open.terminator.multi.folder.sh``
+
+![Terminator example](../img/terminator_example.jpg)
 
 ***
