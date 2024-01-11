@@ -1,6 +1,14 @@
 # My Nemo Actions
 
-## meld 
+## Meld
+
+- Meld is a visual diff and merge tool, targeted at developers.
+\
+Integrate [Meld diff tool](https://en.wikipedia.org/wiki/Meld_(software)) to context menu: [``meld diff f1 f2 [f3].nemo_action``](./meld/meld%20diff%20f1%20f2%20%5Bf3%5D.nemo_action)
+
+![Meld diff example](../img/meld_example.png)
+
+***
 
 ## p7zip
 
