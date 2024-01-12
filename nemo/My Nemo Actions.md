@@ -24,12 +24,16 @@ Integrate [Meld diff tool](https://en.wikipedia.org/wiki/Meld_(software)) to con
 **DO NOT USE the 7‐zip format for backup purpose** on Linux/Unix because :
 7‐zip does not store the owner/group of the file.
 
-- **Adds files or directories to 7-Zip archive using "ultra settings"**
+- **Adds files or directories to 7-Zip archive using "ultra settings". Add a password (optional).**
 \
 Integrate the file archiver [p7zip (7-Zip)](https://www.7-zip.org/) with script: [7z_archive_with_ultra_settings.nemo_action](./p7zip/7z_archive_with_ultra_settings.nemo_action).\
 The Action uses the following bash script: [7z_archive_with_ultra_settings.sh](./p7zip/7z_archive_with_ultra_settings.sh) copy it to nemo/action folder too.\
 And set mode to executable: ``chmod +x 7z_archive_with_ultra_settings.sh``\
 The prerequisite is that [p7zip-full](https://packages.ubuntu.com/search?keywords=p7zip-full) is installed. ``sudo apt install p7zip-full``\
+
+![Select folder](../img/create_archive_filefolder.jpg)
+
+![Archive name and pwd](../img/arch_name_pwd.jpg)
 
 - **Extract 7-Zip, zip, bzip2, gz Archive**
 \
