@@ -30,14 +30,24 @@ if [ $? = 0 ]; then
         if [ $? != 0 ]; then
             # Archive without password.
             # Adds all files or directories to archive using "ultra settings".
-            message=$(7z a -t7z -m0=lzma -mx=9 -mfb=64 -md=32m -ms=on \
-                "${usr_file}" "$@" 2>&1)
+            message=$({ $(7z a -t7z -m0=lzma -mx=9 -mfb=64 -md=32m -ms=on \
+                "${usr_file}" "$@" 2>&1 | 
+                tee /dev/fd/3 |
+            zenity --progress \
+                --title="7Zip has started." \
+                --text="7-Zip is running, please wait..." \
+                --pulsate --auto-close --no-cancel); } 3>&1)
         else
             # With  data  and header archive encryption on.
             # he=[off|on] Enables or disables archive header encryption.
             # Adds all files or directories to archive using "ultra settings".
-            message=$(7z a -mhe=on -p$pwd -t7z -m0=lzma -mx=9 -mfb=64 -md=32m -ms=on \
-                "${usr_file}" "$@" 2>&1)
+            message=$({ $(7z a -mhe=on -p$pwd -t7z -m0=lzma -mx=9 -mfb=64 -md=32m -ms=on \
+                "${usr_file}" "$@" 2>&1 | 
+                tee /dev/fd/3 |
+            zenity --progress \
+                --title="7Zip has started - inclusive encryption." \
+                --text="7-Zip is running, please wait..." \
+                --pulsate --auto-close --no-cancel); } 3>&1)
         fi
 
         if [ $? = 0 ]; then
