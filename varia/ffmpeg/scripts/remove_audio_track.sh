@@ -36,8 +36,8 @@ result=$(zenity --forms \
 
 if [ $? = 0 ]; then
 
-    suffix="$(echo "$result"| cut -d '|' -f 1)"
-    override="$(echo "$result"| cut -d '|' -f 2)"
+    suffix="$(echo "$result" | cut -d '|' -f 1)"
+    override="$(echo "$result" | cut -d '|' -f 2)"
     if [ "$override" != "y" ]; then
         override="n"
     fi
@@ -50,36 +50,51 @@ fi
 # File name delimiter/seperator is U+2534 (BOX DRAWINGS LIGHT UP AND HORIZONTAL ┴)
 IFS="┴"
 declare -i audio_removed_cnt=0
-declare -i sel_vid_total=$(echo "$sel_videos"|awk -F'┴' '{print NF}')
-for input_video in $sel_videos; do
+declare -i loop_cnt=0
+declare -i sel_vid_total=$(echo "$sel_videos" | awk -F'┴' '{print NF}')
+rm_cnt=$({ $(
+    for input_video in $sel_videos; do
+        ((loop_cnt++))
+        filename=$(basename -- "$input_video")
+        ext="${filename##*.}"
+        name="${filename%.*}"
+        targetPath="${target_dir}/${name}${suffix}.${ext}"
 
-    filename=$(basename -- "$input_video")
-    ext="${filename##*.}"
-    name="${filename%.*}"
-    targetPath="${target_dir}/${name}${suffix}.${ext}"
-
-    if [ -f "$targetPath" ] && [ "$override" == "n" ]; then
-        continue
-    fi
-
-    # Checks if the video is corrupted.
-    probe=$(ffprobe "$input_video" 2>&1)
-    if [ $? -ne 0 ]; then
-        zenity --error --text="${probe}\n\nProcess the next Video..."
-        continue
-    fi
-    # Checks whether the video even has an audio track.
-    ffprobe -loglevel error -select_streams a \
-            -show_entries stream=codec_type -of csv=p=0 "$input_video" | grep audio >/dev/null 2>&1
-    if [ $? = 0 ]; then
-
-        msg=$(ffmpeg "-${override}" -i "$input_video" -map 0 -map -0:a -c copy "${targetPath}" 2>&1)
-        if [ $? = 0 ]; then
-            ((audio_removed_cnt++))
-        else
-            zenity --error --text="$msg"
+        if [ -f "$targetPath" ] && [ "$override" == "n" ]; then
+            continue
         fi
-    fi
-done
-fin_text="${audio_removed_cnt} of ${sel_vid_total} Videos was the Audio removed."
-zenity --info --title="Audio removing finished." --text="$fin_text"
+
+        # Checks if the video is corrupted.
+        probe=$(ffprobe "$input_video" 2>&1)
+        if [ $? -ne 0 ]; then
+            zenity --error --text="${probe}\n\nProcess the next Video..."
+            continue
+        fi
+        # Checks whether the video even has an audio track.
+        ffprobe -loglevel error -select_streams a \
+            -show_entries stream=codec_type -of csv=p=0 "$input_video" | grep audio >/dev/null 2>&1
+        if [ $? = 0 ]; then
+
+            msg=$(ffmpeg "-${override}" -i "$input_video" -map 0 -map -0:a -c copy "${targetPath}" 2>&1)
+            if [ $? = 0 ]; then
+                ((audio_removed_cnt++))
+            else
+                zenity --error --text="$msg"
+            fi
+        fi
+        if [ $loop_cnt -eq $sel_vid_total ]; then
+            echo "$audio_removed_cnt"
+        fi
+    done 2>&1 |
+        tee /dev/fd/3 |
+        zenity --progress \
+            --title="Audio removing has started." \
+            --text="Removing audio please wait..." \
+            --pulsate --no-cancel --auto-close
+); } 3>&1)
+if [ $? = 0 ]; then
+    fin_text="${rm_cnt} of ${sel_vid_total} Videos was the Audio removed."
+    zenity --info --title="Audio removing finished." --text="$fin_text"
+else
+    zenity --error --title="Error removing audio tracks." --text="$rm_cnt"
+fi
