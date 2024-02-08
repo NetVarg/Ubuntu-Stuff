@@ -1,5 +1,8 @@
 # Download an embedded video with src="blob:`https://www...`"
 
+Prerequisite \
+[FFmpeg](https://ffmpeg.org/download.html)
+
 Download embedded videos which uses M3U8 file (media playlist). Determine URL and download it with ffmpeg.\
 In embedded videos, the URL is often missing or specified as a 'blob'. How to download this video?
 
