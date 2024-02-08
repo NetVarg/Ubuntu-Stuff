@@ -75,3 +75,5 @@ In embedded videos, the URL is often missing or specified as a 'blob'. How to do
 [Download an embedded video which contains ...src="blob:https://www..."](./varia/ffmpeg/download_blob/download_blob_m3u8.md)
 
 - **Remove audio tracks** from a Video with ffmpeg. [See script](./varia/ffmpeg/scripts/remove_audio_track.sh)
+
+- **Compress/Convert mp4 and webm Videos.** [See](./varia/ffmpeg/scripts/Compress-Convert.md)
