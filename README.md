@@ -76,4 +76,4 @@ In embedded videos, the URL is often missing or specified as a 'blob'. How to do
 
 - **Remove audio tracks** from a Video with ffmpeg. [See script](./varia/ffmpeg/scripts/remove_audio_track.sh)
 
-- **Compress/Convert mp4 and webm Videos.** [See](./varia/ffmpeg/scripts/Compress-Convert.md)
+- **Compress/convert a common video format** (containers like avi, flv, mkv, mov, wmv, mp4, ts, webm, etc.) to mp4 or webm. [See here](./varia/ffmpeg/scripts/Compress-Convert.md)
