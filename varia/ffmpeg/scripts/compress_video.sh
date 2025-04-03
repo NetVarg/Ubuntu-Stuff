@@ -17,7 +17,7 @@ source ./compress_video_functions.sh
 
 # Choose the target video type (convert/compress to). Can be of the same
 # type as the input video.
-video_type=$(zenity --list --radiolist --width=600 \
+video_type=$(zenity --list --radiolist --width=600 --height=400 \
     --title="Choose the target video type (convert/compress to). Cancel = Exit Script." \
     --text="<i>Select output video type (container). Can be of the same type as the input video.</i>" \
     --hide-header --column "Select" --column="Video Type (Container)" \
@@ -69,7 +69,7 @@ mp4)
     applStd_text="Do you want your file to be compatible with"
     applStd_text+=" the Apple\n'industry standard' H.265?\nDefault is no."
 
-    params=$(zenity --forms --separator="|" \
+    params=$(zenity --forms --separator="|" --width=800 \
         --title="Convert/Compress all videos. Cancel = Exit Script." \
         --text="→ Set vary optional parameters. <i>Output container is: $video_type</i>" \
         --add-entry="$(printf "$crf_text")" \
@@ -160,7 +160,7 @@ webm)
     cpu_text+="\n⎆ When the deadline/quality is set to realtime, the available values are 0 to 8"
     cpu_val="⎆ 0 is default|⎆ 1|⎆ 2|⎆ 3|⎆ 4|⎆ 5|⎆ 6|⎆ 7|⎆ 8"
 
-    params=$(zenity --forms --separator="|" \
+    params=$(zenity --forms --separator="|" --width=900 \
         --title="Convert/Compress all videos. Cancel = Exit Script." \
         --text="→ Set vary optional parameters. <i>Output container is: $video_type</i>" \
         --add-entry="$(printf "$crf_text")" \
